@@ -8,9 +8,14 @@
     <title>Neumorphism-UI-Calculator</title>
 </head>
 <body>
+    <div class="app-bg-shape app-bg-shape-left" aria-hidden="true"></div>
+    <div class="app-bg-shape app-bg-shape-right" aria-hidden="true"></div>
+
+    <main class="app-shell">
     <form class="calculator">
+        <p class="calc-caption">Neumorphic Calculator</p>
         <input type="text" placeholder="0" name="displayResult" class="area"/>
-        <input type="button" name="" class="btn btn-ac" value="AC" onclick="displayResult.value=' '">
+        <input type="button" name="" class="btn btn-ac" value="AC" onclick="displayResult.value=''">
         <input type="button" name="" value="+/-" onclick="makeNegative(displayResult.value)" class="btn btn-plusorminus">
         <input type="button" name="" value="%" onclick="calcNumbers(this.value)" class="btn btn-percent">
         <input type="button" name="" value="/" onclick="calcNumbers(this.value)" class="btn btn-divide">
@@ -30,6 +35,7 @@
         <input type="button" name="" value="." onclick="calcNumbers(this.value)" class="btn btn-dot" >
         <input type="button" name="" value="=" onclick="(displayResult.value.includes('%'))?percentage(displayResult.value):displayResult.value=eval(displayResult.value);" class="btn btn-equal">
     </form>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

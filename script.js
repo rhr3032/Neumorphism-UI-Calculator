@@ -20,4 +20,4 @@ function makeNegative(result){
     else{
         document.querySelector('.area').value = '-' + result;
     }
-}    
+}
